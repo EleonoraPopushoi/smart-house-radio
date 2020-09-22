@@ -1,5 +1,13 @@
 package ru.netology.smart.house;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class Radio {
 
     private int maxVolume = 100;
@@ -9,18 +17,6 @@ public class Radio {
     private int currentVolume;
     private int currentRadioStation;
 
-    public Radio(){
-    }
-
-    public Radio(int maxVolume, int minVolume, int maxRadioStation, int minRadioStation, int currentVolume, int currentRadioStation) {
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
-        this.maxRadioStation = maxRadioStation;
-        this.minRadioStation = minRadioStation;
-        this.currentVolume = currentVolume;
-        this.currentRadioStation = currentRadioStation;
-
-    }
 
     public void increaseVolume() {
         if (currentVolume == maxVolume) {
