@@ -2,12 +2,25 @@ package ru.netology.smart.house;
 
 public class Radio {
 
-    private int maxVolume = 10;
+    private int maxVolume = 100;
     private int minVolume = 0;
-    private int maxRadioStation = 9;
+    private int maxRadioStation = 10;
     private int minRadioStation = 0;
     private int currentVolume;
     private int currentRadioStation;
+
+    public Radio(){
+    }
+
+    public Radio(int maxVolume, int minVolume, int maxRadioStation, int minRadioStation, int currentVolume, int currentRadioStation) {
+        this.maxVolume = maxVolume;
+        this.minVolume = minVolume;
+        this.maxRadioStation = maxRadioStation;
+        this.minRadioStation = minRadioStation;
+        this.currentVolume = currentVolume;
+        this.currentRadioStation = currentRadioStation;
+
+    }
 
     public void increaseVolume() {
         if (currentVolume == maxVolume) {
